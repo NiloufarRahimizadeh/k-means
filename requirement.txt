@@ -1,0 +1,2 @@
+(base) $ conda install matplotlib numpy pandas seaborn scikit-learn ipython
+(base) $ conda install -c conda-forge kneed

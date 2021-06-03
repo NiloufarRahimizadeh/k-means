@@ -1,0 +1,29 @@
+How to Perform K-Means Clustering in Python
+# Understanding the K-Means Algorithm
+Conventional k-means requires only a few steps. The first step 
+is to randomly select k centroids, where k is equal to the number
+of clusters you choose. Centroids are data points representing 
+the center of a cluster.
+The main element of the algorithm works by a two-step process 
+called expectation-maximization.
+The expectation step assigns each data point to its nearest centroid. 
+Then, the maximization step computes the mean of all the points for 
+each cluster and sets the new centroid. Here’s what the conventional 
+version of the k-means algorithm looks like:
+
+* Specify the number k of clusters to assign
+* Randomly initialized k centroids
+* Repeat
+    expectation: Assign each points to each closest centroid.
+    maximization: Compute the new centroid (mean) of each cluster
+* Until the centroid positions do not change.
+
+k means algorithm
+
+The quality of the cluster assignments is determined by computing 
+the sum of the squared error (SSE) after the centroids converge, 
+or match the previous iteration’s assignment.
+
+The SSE is defined as the sum of the squared Euclidean distances of each point to
+its closest centroid. Since this is a measure of error, the objective of k-means 
+is to try to minimize this value.
