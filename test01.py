@@ -28,7 +28,7 @@ features, true_labels = make_blobs(
 # Here’s a look at the first five elements for each of the variables 
 # returned by "make_blobs()":
 # print(features[:5])
-# print(true_labels[:5])
+print(true_labels[:5])
 # A machine learning algorithm would consider weight more important 
 # than height only because the values for weight are larger and have 
 # higher variability from person to person.
@@ -80,3 +80,10 @@ print(kmeans.inertia_)
 print(kmeans.cluster_centers_)
 # The number of iterations required to converge
 print(kmeans.n_iter_)
+# Finally, the cluster assignments are stored as a one-dimensional NumPy array 
+# in kmeans.labels_. Here’s a look at the first five predicted labels:
+print(kmeans.labels_[:5])
+#  the ordering of cluster labels is dependent on the initialization. 
+# Cluster 0 from the first run could be labeled cluster 1 in the 
+# second run and vice versa. This doesn’t affect clustering evaluation 
+# metrics.
